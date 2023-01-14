@@ -54,7 +54,6 @@
 }
 
 .option {
-  /* border: 2px solid #ff5200; */
   margin: 10px;
   display: flex;
   padding-left: 20px;
@@ -62,8 +61,15 @@
   background: #d147072c;
   border-radius: 5px;
   font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
+.option:hover {
+  background: #d147074b;
 }
 
+.rightOptions {
+  background: #000;
+}
 @media screen and (max-width: 830px) {
   .mainWrapTotal {
     grid-template-columns: 1fr 1fr;
