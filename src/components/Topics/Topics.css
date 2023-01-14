@@ -37,6 +37,33 @@
   padding: 0 10px;
 }
 
+/* details quiz page  */
+.detailsWrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+.questionQuestionArea {
+  border: 1px solid red;
+  margin: 20px;
+}
+
+.singleQuestion {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.option {
+  /* border: 2px solid #ff5200; */
+  margin: 10px;
+  display: flex;
+  padding-left: 20px;
+  cursor: pointer;
+  background: #d147072c;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
 @media screen and (max-width: 830px) {
   .mainWrapTotal {
     grid-template-columns: 1fr 1fr;

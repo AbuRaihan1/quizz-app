@@ -3,6 +3,7 @@ import Main from "../../layout/Main";
 import Blog from "../Blog/Blog";
 import Staticties from "../Staticties/Staticties";
 import Topics from "../Topics/Topics";
+import TopicsDetails from "../Topics/TopicsDetails";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -25,6 +26,17 @@ const router = createBrowserRouter([
       {
         path: "/blog",
         element: <Blog></Blog>,
+      },
+
+      // dynamic routes
+      {
+        path: "/topic/:topicId",
+        element: <TopicsDetails></TopicsDetails>,
+        loader: async (params) => {
+          return fetch(
+            `https://openapi.programming-hero.com/api/quiz/1`
+          );
+        },
       },
     ],
   },
