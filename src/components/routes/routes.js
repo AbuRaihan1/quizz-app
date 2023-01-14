@@ -6,9 +6,14 @@ import Topics from "../Topics/Topics";
 const router = createBrowserRouter([
   {
     path: "/",
+    loader: () => fetch("https://openapi.programming-hero.com/api/quiz"),
     element: <Main></Main>,
     errorElement: <h1>Error 404 Page not Found</h1>,
     children: [
+      {
+        path: "/",
+        element: <Topics></Topics>,
+      },
       {
         path: "/topics",
         element: <Topics></Topics>,
