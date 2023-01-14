@@ -1,0 +1,30 @@
+header {
+  background: white;
+  border-bottom: 1px solid lightgray;
+  box-shadow: 1px 1px 5px 1px lightgray;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.nav .navItemArea a {
+  text-decoration: none;
+  color: black;
+  padding: 5px 15px;
+  background: rgb(236, 231, 231);
+  margin: 0 8px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all .2s ease-in-out;
+}
+.nav .navItemArea a:hover {
+    background: rgb(182, 177, 177);
+}
+.nav .navItemArea a.active {
+   background: #ff5200;
+   color: white;
+}
+

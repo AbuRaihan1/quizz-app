@@ -1,10 +1,21 @@
 import React from 'react';
-import './Header.css'
+import { NavLink } from 'react-router-dom';
+import './Header.css';
 const Header = () => {
+  
     return (
-        <div>
-            <h3>Header</h3>
-        </div>
+        <header>
+            <div className="nav">
+                <div className="logoArea">
+                    <h2>Leets Quizz</h2>
+                </div>
+                <div className="navItemArea">
+                    <NavLink to='/topics' className={({isActive}) => isActive ? 'active' :  undefined}>Topics</NavLink>
+                    <NavLink to='/staticties'>Staticties</NavLink>
+                    <NavLink to='/blog'>Blog</NavLink>
+                </div>
+            </div>
+        </header>
     );
 };
 
