@@ -70,6 +70,14 @@
 .rightOptions {
   background: #000;
 }
+
+.userRightAns {
+  background: rgba(9, 209, 9, 0.486);
+  cursor: not-allowed;
+}
+.userRightAns:hover {
+  background: rgba(9, 209, 9, 0.486);
+}
 @media screen and (max-width: 830px) {
   .mainWrapTotal {
     grid-template-columns: 1fr 1fr;

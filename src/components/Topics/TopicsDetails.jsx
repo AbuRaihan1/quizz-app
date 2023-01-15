@@ -1,5 +1,6 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
+import { toast } from "react-toastify";
 import SingleTopics from "./SingleTopics";
 import "./Topics.css";
 const TopicsDetails = () => {
@@ -10,10 +11,16 @@ const TopicsDetails = () => {
   const handleSubmitQuestion = (questions, selectOption) => {
     const correctAnswer = questions.correctAnswer;
     if (correctAnswer === selectOption) {
-      let options = document.querySelectorAll(".option");
-      console.log("correct answer");
+      // let options = document.querySelectorAll(".option");
+      // for (const option of options) {
+      //   option.addEventListener("click", function () {
+      //     this.classList.add('userRightAns');
+      //     this.setAttribute("disabled", true);
+      //   });
+      // }
+      toast.success("Your Answer Is Correct", { autoClose: 500 });
     } else {
-      console.log("wrong ans");
+      toast.error("oops! Wrong Answer", { autoClose: 500 });
     }
   };
 
