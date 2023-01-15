@@ -1,0 +1,35 @@
+.rightAnsWrapper {
+  border: 1px solid lightgray;
+  margin-top: 40px;
+  border-radius: 10px;
+  position: sticky;
+  top: 5px;
+}
+
+.rightAnsWrapper h2 {
+  border-bottom: 1px solid black;
+  padding-bottom: 12px;
+}
+.singelItemRightAns {
+  text-align-last: left;
+}
+.singelItemRightAns li {
+  list-style-type: none;
+  border: 1px solid lightgray;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.hideUserAnsArea {
+    visibility: hidden;
+}
+
+.defaultAnswering {
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

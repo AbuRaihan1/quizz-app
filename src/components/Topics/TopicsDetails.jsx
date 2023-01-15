@@ -1,16 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { toast } from "react-toastify";
 import SingleTopics from "./SingleTopics";
 import "./Topics.css";
+
+import RightAns from "../../UserAnswers/RightAns";
+import WrongAns from "../../UserAnswers/WrongAns";
 const TopicsDetails = () => {
   const topicsDetailsData = useLoaderData();
   const topicsDetails = topicsDetailsData.data;
   const questionsData = topicsDetails.questions;
 
+  const [rightAns, setRightAns] = useState([]);
+  const [wrongAns, setWrongAns] = useState([]);
+
   const handleSubmitQuestion = (questions, selectOption) => {
     const correctAnswer = questions.correctAnswer;
     if (correctAnswer === selectOption) {
+      let newAns = [];
+      if (rightAns) {
+        newAns = [...rightAns, selectOption];
+      } else {
+        newAns = [selectOption];
+      }
+      setRightAns(newAns);
+
       // let options = document.querySelectorAll(".option");
       // for (const option of options) {
       //   option.addEventListener("click", function () {
@@ -18,21 +32,42 @@ const TopicsDetails = () => {
       //     this.setAttribute("disabled", true);
       //   });
       // }
-      toast.success("Your Answer Is Correct", { autoClose: 500 });
+      toast.success("Your Answer Is Correct", {
+        autoClose: 500,
+        position: "top-center",
+      });
     } else {
-      toast.error("oops! Wrong Answer", { autoClose: 500 });
+      let newAns = [];
+      if (wrongAns) {
+        newAns = [...wrongAns, selectOption];
+      } else {
+        newAns = [selectOption];
+      }
+      setWrongAns(newAns);
+
+      toast.error("oops! Wrong Answer", {
+        autoClose: 500,
+        position: "top-center",
+      });
     }
   };
 
   return (
     <div>
-      <h2>
+      <h2
+        style={{
+          position: "sticky",
+          top: "0px",
+          padding: "10px",
+          background: "white",
+        }}
+      >
         Here is a Question About{" "}
         <span style={{ color: "#ff5200" }}>{topicsDetails.name}</span>
       </h2>
       <div className="detailsWrapper">
         <div className="wrongQuestionArea">
-          <h2>Wrong Ansers</h2>
+          <WrongAns wrongAns={wrongAns} setWrongAns={setWrongAns}></WrongAns>
         </div>
         <div className="questionQuestionArea">
           {questionsData.map((questions) => (
@@ -44,7 +79,7 @@ const TopicsDetails = () => {
           ))}
         </div>
         <div className="rightQuestionArea">
-          <h2>Right Answers</h2>
+          <RightAns rightAns={rightAns} setRightAns={setRightAns}></RightAns>
         </div>
       </div>
     </div>
