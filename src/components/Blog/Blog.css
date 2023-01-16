@@ -1,0 +1,22 @@
+.blogjWrapper {
+  display: flex;
+  gap: 40px;
+  margin: 40px;
+}
+.commonQue {
+  border: 1px solid lightgray;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.commonQue p {
+  text-align: justify;
+  font-size: 17px;
+  color: rgb(59, 57, 57);
+}
+
+@media screen and (max-width: 700px) {
+  .blogjWrapper {
+    flex-direction: column;
+  }
+}
