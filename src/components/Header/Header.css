@@ -3,6 +3,8 @@ header {
   border-bottom: 1px solid lightgray;
   box-shadow: 1px 1px 5px 1px lightgray;
 }
+
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -26,5 +28,16 @@ header {
 .nav .navItemArea a.active {
    background: #ff5200;
    color: white;
+}
+
+@media screen and (max-width:460px){
+  header h2 {
+    font-size: 16px;
+  }
+
+  .nav .navItemArea a {
+    padding: 5px 8px;
+    margin: 0 5px;
+  }
 }
 

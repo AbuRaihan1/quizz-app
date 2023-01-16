@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../../layout/Main";
 import Blog from "../Blog/Blog";
+import ErrorElem from "../ErrorElem";
 import Staticties from "../Staticties/Staticties";
 import Topics from "../Topics/Topics";
 import TopicsDetails from "../Topics/TopicsDetails";
@@ -9,7 +10,7 @@ const router = createBrowserRouter([
     path: "/",
     loader: () => fetch("https://openapi.programming-hero.com/api/quiz"),
     element: <Main></Main>,
-    errorElement: <h1>Error 404 Page not Found</h1>,
+    errorElement: <ErrorElem></ErrorElem>,
     children: [
       {
         path: "/",

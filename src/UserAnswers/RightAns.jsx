@@ -12,7 +12,7 @@ const RightAns = ({ rightAns }) => {
   }
   return (
     <div className="rightAnsWrapper">
-      <h2>Right Answers</h2>
+      <h2>Your Right Answers : <span> {rightAns.length}</span></h2>
       <div className="singelItemRightAns">
         {selectRightAns}
         {selectRightBody}

@@ -3,11 +3,11 @@
   margin-top: 40px;
   border-radius: 10px;
   position: sticky;
-  top: 5px;
+  top: 55px;
 }
 
 .rightAnsWrapper h2 {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid lightgray;
   padding-bottom: 12px;
 }
 .singelItemRightAns {
@@ -23,13 +23,20 @@
 }
 
 .hideUserAnsArea {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 .defaultAnswering {
-    text-align: center;
-    font-weight: bold;
+  text-align: center;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .detailsWrapper {
+    flex-direction: column-reverse;
     display: flex;
-    justify-content: center;
-    align-items: center;
+  }
 }

@@ -25,17 +25,17 @@ const TopicsDetails = () => {
       }
       setRightAns(newAns);
 
-      // let options = document.querySelectorAll(".option");
-      // for (const option of options) {
-      //   option.addEventListener("click", function () {
-      //     this.classList.add('userRightAns');
-      //     this.setAttribute("disabled", true);
-      //   });
-      // }
-      toast.success("Your Answer Is Correct", {
-        autoClose: 500,
-        position: "top-center",
-      });
+        // let options = document.querySelectorAll(".option");
+        // for (const option of options) {
+        //   option.addEventListener("click", function () {
+        //     this.classList.add('userRightAns');
+        //     this.setAttribute("disabled", true);
+        //   });
+        // }
+        toast.success("Your Answer Is Correct", {
+          autoClose: 500,
+          position: "top-center",
+        });
     } else {
       let newAns = [];
       if (wrongAns) {
@@ -60,6 +60,7 @@ const TopicsDetails = () => {
           top: "0px",
           padding: "10px",
           background: "white",
+          zIndex:"1"
         }}
       >
         Here is a Question About{" "}

@@ -14,7 +14,7 @@ const WrongAns = ({ wrongAns, setWrongAns }) => {
 
   return (
     <div className="rightAnsWrapper" id="wrongANsWrapper">
-      <h2>Wrong Answers</h2>
+      <h2>Your Wrong Answers</h2>
       <div className="singelItemRightAns">
         {selectWrongAns}
         {selectWrongBody}
