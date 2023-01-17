@@ -20,6 +20,11 @@
   padding: 10px;
   border-radius: 5px;
   font-weight: bold;
+  background: #47e632f1;
+}
+
+.singelItemWrongAns li {
+  background: #e63232f1;
 }
 
 .hideUserAnsArea {
