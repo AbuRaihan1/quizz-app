@@ -6,6 +6,7 @@ const Topics = () => {
   const topicsData = useContext(TopicsContext);
   return (
     <>
+    <h1>Welcome to my Quiz app</h1>
       <div className="mainWrapTotal">
         {topicsData.map((topic) => (
           <Topic topic={topic} key={topic.id}></Topic>

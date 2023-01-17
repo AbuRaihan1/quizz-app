@@ -2,10 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const ErrorElem = () => {
-  let errorStyle = {
-    TextDecoration: "none",
-    border: "1px solid red",
-  };
   return (
     <div>
       <h1>Error 404 Page not Found</h1>{" "}
@@ -18,9 +14,9 @@ const ErrorElem = () => {
             textDecoration: "none",
             background: "#ff5200",
             fontSize: "23px",
-            padding : "5px 20px",
-            borderRadius : "5px",
-            color : "white"
+            padding: "5px 20px",
+            borderRadius: "5px",
+            color: "white",
           }}
         >
           {" "}

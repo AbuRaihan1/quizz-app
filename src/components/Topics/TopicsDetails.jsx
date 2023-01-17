@@ -69,6 +69,7 @@ const TopicsDetails = () => {
           padding: "10px",
           background: "white",
           zIndex: "1",
+          textAlign: "center",
         }}
       >
         Here is a Question About{" "}

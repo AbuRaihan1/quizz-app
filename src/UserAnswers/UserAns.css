@@ -9,6 +9,7 @@
 .rightAnsWrapper h2 {
   border-bottom: 1px solid lightgray;
   padding-bottom: 12px;
+  text-align: center;
 }
 .singelItemRightAns {
   text-align-last: left;

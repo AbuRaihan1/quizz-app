@@ -4,7 +4,6 @@ header {
   box-shadow: 1px 1px 5px 1px lightgray;
 }
 
-
 .nav {
   display: flex;
   justify-content: space-between;
@@ -20,17 +19,17 @@ header {
   margin: 0 8px;
   border-radius: 5px;
   font-weight: bold;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .nav .navItemArea a:hover {
-    background: rgb(182, 177, 177);
+  background: rgb(182, 177, 177);
 }
 .nav .navItemArea a.active {
-   background: #ff5200;
-   color: white;
+  background: #ff5200;
+  color: white;
 }
 
-@media screen and (max-width:460px){
+@media screen and (max-width: 460px) {
   header h2 {
     font-size: 16px;
   }
@@ -40,4 +39,3 @@ header {
     margin: 0 5px;
   }
 }
-
