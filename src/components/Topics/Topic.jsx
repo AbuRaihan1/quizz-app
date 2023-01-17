@@ -10,7 +10,6 @@ const Topic = ({ topic }) => {
         <div className="topicDesc">
           <h3>{name}</h3>
           <p>
-            {" "}
             <strong>{total}</strong> Questions
           </p>
         </div>
@@ -18,7 +17,6 @@ const Topic = ({ topic }) => {
         <Link to={`/topic/${id}`}>
           <button>Get Started</button>
         </Link>
-        
       </div>
     </div>
   );

@@ -8,16 +8,20 @@ import RightAns from "../../UserAnswers/RightAns";
 import WrongAns from "../../UserAnswers/WrongAns";
 const TopicsDetails = () => {
   const topicsDetailsData = useLoaderData();
-  console.log(topicsDetailsData);
   const topicsDetails = topicsDetailsData.data;
   const questionsData = topicsDetails.questions;
 
   const [rightAns, setRightAns] = useState([]);
   const [wrongAns, setWrongAns] = useState([]);
+  let lastItemRight = rightAns[rightAns.length - 1];
+  let lastItemWrong = wrongAns[wrongAns.length - 1];
 
   const handleSubmitQuestion = (questions, selectOption) => {
     const correctAnswer = questions.correctAnswer;
     if (correctAnswer === selectOption) {
+      if (lastItemRight === selectOption) {
+        return;
+      }
       let newAns = [];
       if (rightAns) {
         newAns = [...rightAns, selectOption];
@@ -38,6 +42,9 @@ const TopicsDetails = () => {
         position: "top-center",
       });
     } else {
+      if (lastItemWrong === selectOption) {
+        return;
+      }
       let newAns = [];
       if (wrongAns) {
         newAns = [...wrongAns, selectOption];
@@ -89,18 +96,3 @@ const TopicsDetails = () => {
 };
 
 export default TopicsDetails;
-
-// import React from 'react';
-// import { useLoaderData } from 'react-router-dom';
-
-// const TopicsDetails = () => {
-//   const data = useLoaderData();
-//   console.log(data);
-//   return (
-//     <div>
-//       <h2>amrsonar bangla</h2>
-//     </div>
-//   );
-// };
-
-// export default TopicsDetails;

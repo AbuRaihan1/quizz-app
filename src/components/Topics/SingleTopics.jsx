@@ -2,8 +2,6 @@ import { EyeIcon } from "@heroicons/react/24/solid";
 import React from "react";
 import { toast } from "react-toastify";
 const SingleTopics = ({ questions, handleSubmitQuestion }) => {
-  console.log(questions);
-
   const showAns = (correctAnswer) => {
     toast.info("Right Ans is: " + correctAnswer, {
       autoClose: 2000,
