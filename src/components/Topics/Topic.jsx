@@ -14,10 +14,11 @@ const Topic = ({ topic }) => {
             <strong>{total}</strong> Questions
           </p>
         </div>
+
         <Link to={`/topic/${id}`}>
-          {" "}
-          <button>Get Stared</button>
+          <button>Get Started</button>
         </Link>
+        
       </div>
     </div>
   );

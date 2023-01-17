@@ -8,6 +8,7 @@ import RightAns from "../../UserAnswers/RightAns";
 import WrongAns from "../../UserAnswers/WrongAns";
 const TopicsDetails = () => {
   const topicsDetailsData = useLoaderData();
+  console.log(topicsDetailsData);
   const topicsDetails = topicsDetailsData.data;
   const questionsData = topicsDetails.questions;
 
@@ -25,17 +26,17 @@ const TopicsDetails = () => {
       }
       setRightAns(newAns);
 
-        // let options = document.querySelectorAll(".option");
-        // for (const option of options) {
-        //   option.addEventListener("click", function () {
-        //     this.classList.add('userRightAns');
-        //     this.setAttribute("disabled", true);
-        //   });
-        // }
-        toast.success("Your Answer Is Correct", {
-          autoClose: 500,
-          position: "top-center",
-        });
+      // let options = document.querySelectorAll(".option");
+      // for (const option of options) {
+      //   option.addEventListener("click", function () {
+      //     this.classList.add('userRightAns');
+      //     this.setAttribute("disabled", true);
+      //   });
+      // }
+      toast.success("Your Answer Is Correct", {
+        autoClose: 500,
+        position: "top-center",
+      });
     } else {
       let newAns = [];
       if (wrongAns) {
@@ -60,7 +61,7 @@ const TopicsDetails = () => {
           top: "0px",
           padding: "10px",
           background: "white",
-          zIndex:"1"
+          zIndex: "1",
         }}
       >
         Here is a Question About{" "}
@@ -88,3 +89,18 @@ const TopicsDetails = () => {
 };
 
 export default TopicsDetails;
+
+// import React from 'react';
+// import { useLoaderData } from 'react-router-dom';
+
+// const TopicsDetails = () => {
+//   const data = useLoaderData();
+//   console.log(data);
+//   return (
+//     <div>
+//       <h2>amrsonar bangla</h2>
+//     </div>
+//   );
+// };
+
+// export default TopicsDetails;

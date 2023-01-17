@@ -20,6 +20,19 @@ const router = createBrowserRouter([
         path: "/topics",
         element: <Topics></Topics>,
       },
+
+      // dynamic routes
+
+      {
+        path: "topic/:topicId",
+        element: <TopicsDetails></TopicsDetails>,
+        loader: async ({ params }) => {
+          return fetch(
+            `https://openapi.programming-hero.com/api/quiz/${params.topicId}`
+          );
+        },
+      },
+
       {
         path: "/staticties",
         element: <Staticties></Staticties>,
@@ -27,15 +40,6 @@ const router = createBrowserRouter([
       {
         path: "/blog",
         element: <Blog></Blog>,
-      },
-
-      // dynamic routes
-      {
-        path: "/topic/:topicId",
-        element: <TopicsDetails></TopicsDetails>,
-        loader: async (params) => {
-          return fetch(`https://openapi.programming-hero.com/api/quiz/4`);
-        },
       },
     ],
   },
